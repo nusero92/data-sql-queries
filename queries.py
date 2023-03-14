@@ -28,7 +28,7 @@ def late_released_movies(db):
     db.execute(query)
     movies = db.fetchall()
     return [movie[0] for movie in movies]
-    # $CHALLENGIFY_END
+
 
 
 def stats_on(db, genre_name):
@@ -79,7 +79,6 @@ def movie_duration_buckets(db):
         GROUP BY time_range
     """
     return db.execute(query).fetchall()
-    # $CHALLENGIFY_END
 
 
 def top_five_youngest_newly_directors(db):
